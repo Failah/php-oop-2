@@ -16,7 +16,11 @@ Definire la carta di credito come classe e associarla all'utente -->
 echo 'PHP OK';
 
 require_once __DIR__ . '/models/Product.php';
+require_once __DIR__ . '/models/Food.php';
 require_once __DIR__ . '/models/Toy.php';
+require_once __DIR__ . '/models/Utility.php';
+require_once __DIR__ . '/models/User.php';
+require_once __DIR__ . '/models/Registered.php';
 
 $test_product = new Product('croccantini', 'MyDogHouse', '9,98 Euro');
 
@@ -30,5 +34,11 @@ $test_toy->addMaterial('Materiaoscura');
 $test_toy->weight = 500;
 
 var_dump($test_toy);
+
+echo '<hr></hr>';
+
+$test_user_registered = new Registered('Failah', 'failah.test@test.com', 'testpassword');
+
+var_dump($test_user_registered);
 
 ?>
