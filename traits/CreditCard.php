@@ -7,7 +7,7 @@ trait CreditCard
 
     use RestrictSetter;
 
-    public $current_year;
+    public int $current_year;
     public $current_month;
 
     private $number;
@@ -20,7 +20,7 @@ trait CreditCard
         $this->current_year = date('Y');
         $this->current_month = date('m');
 
-        if (($_expiration_year < $this->current_year) || ($_expiration_year = $this->current_year && $_expiration_month >= $this->current_month)) {
+        if (($_expiration_year < $this->current_year) || ($_expiration_year = $this->current_year && $_expiration_month <= $this->current_month)) {
             throw new Exception('Error: you credit card is expired! Please, enter a valid credit card');
         }
 
