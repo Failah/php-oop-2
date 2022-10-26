@@ -15,7 +15,7 @@ trait CreditCard
     private $expiration_month;
     private $security_code;
 
-    public function addCreditCard($_number, $_expiration_year, $_expiration_month, $_security_code)
+    public function payment($_number, $_expiration_year, $_expiration_month, $_security_code)
     {
         $this->current_year = date('Y');
         $this->current_month = date('m');
