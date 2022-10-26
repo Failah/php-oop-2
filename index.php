@@ -38,6 +38,7 @@ var_dump($test_toy);
 echo '<hr></hr>';
 
 $test_user_registered = new Registered('Failah', 'failah.test@test.com', 'testpassword');
+$test_user_registered->addCreditCard(982353232435654, 2023, 1, 123);
 
 var_dump($test_user_registered);
 
