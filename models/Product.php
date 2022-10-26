@@ -9,7 +9,7 @@ class Product
 
     public $name;
     public $brand;
-    public $price;
+    private $price;
 
     function __construct($_name, $_brand = 'Unspecified', $_price)
     {
